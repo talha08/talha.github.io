@@ -1,0 +1,56 @@
+{
+    "eslint.enable": true, //Enable eslint,
+    "editor.formatOnSave": true,
+    "eslint.options": {
+        "extensions": [ //List of file extensions to activate eslint
+            ".html",
+            ".js",
+            ".vue",
+            ".jsx"
+        ]
+    },
+    // An array of language ids which should be validated by ESLint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "vue-html",
+            "autoFix": true
+        }
+    ],
+    // Run the linter on save (onSave) or on type (onType)
+    "eslint.run": "onSave",
+    "eslint.autoFixOnSave": true,
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.css": "prettier",
+    // relevant for 'prettier-eslint' instead of 'prettier'
+    "prettier.eslintIntegration": false,
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatter.postcss": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    // at the time of this writing there is no stylus support by prettier
+    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "vetur.validation.style": true,
+    // Validate vue-html in <template> using eslint-plugin-vue
+    "vetur.validation.template": true,
+    "explorer.openEditors.visible": 0,
+    "workbench.statusBar.visible": true,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": true, //Autofix any fixable errors when linting
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "window.openFilesInNewWindow": "on",
+    "prettier.semi": false,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.tabCompletion": true,
+    "extensions.ignoreRecommendations": false,
+    "editor.fontFamily": "'Operator Mono XLight'",
+    "workbench.startupEditor": "welcomePage",
+    "editor.mouseWheelZoom": true,
+}
