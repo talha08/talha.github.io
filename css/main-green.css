@@ -1912,6 +1912,70 @@ body>footer .copyrights {
 
 /* /Testimonials Carousel */
 
+
+
+/* Client Carousel */
+.client.owl-carousel .owl-nav {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.client.owl-carousel .owl-nav .owl-prev {
+  margin-right: 3px;
+}
+
+.client.owl-carousel .owl-nav .owl-prev,
+.client.owl-carousel .owl-nav .owl-next {
+  display: inline-block;
+  color: #555;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.client.owl-carousel .owl-nav .owl-prev:hover,
+.client.owl-carousel .owl-nav .owl-next:hover {
+  color: #fff;
+  background-color: #148F77;
+}
+
+.client.owl-carousel .owl-nav .owl-prev:before,
+.client.owl-carousel .owl-nav .owl-next:before {
+  position: relative;
+  margin: 2px;
+  width: 22px;
+  height: 22px;
+  font-family: FontAwesome;
+  font-size: 21px;
+  line-height: 22px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+.client.owl-carousel .owl-nav .owl-prev:before {
+  content: "\f104";
+}
+
+.client.owl-carousel .owl-nav .owl-next:before {
+  content: "\f105";
+}
+
+@media (min-width: 992px) {
+  .col-sm-4.col-md-2.subpage-block {
+    width: 45%;
+  }
+}
+
+/* /Client Carousel */
+
+
+
 /* Portfolio Carousel */
 .portfolio-page-carousel {
   overflow: hidden;

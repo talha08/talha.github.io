@@ -180,6 +180,34 @@
             });
 
 
+
+            // Cliet Slider
+            $(".client.owl-carousel").owlCarousel({
+                nav: true, // Show next/prev buttons.
+                items: 3, // The number of items you want to see on the screen.
+                loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
+                navText: false,
+                margin: 25,
+                responsive: {
+                    // breakpoint from 0 up
+                    0: {
+                        items: 1,
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 2,
+                    },
+                    // breakpoint from 768 up
+                    768: {
+                        items: 3,
+                    },
+                    1200: {
+                        items: 4,
+                    }
+                }
+            });
+
+
             // Text rotation
             $('.text-rotation').owlCarousel({
                 loop: true,
