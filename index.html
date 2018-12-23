@@ -650,9 +650,9 @@
                                         <!-- /Portfolio Item 4 -->
                                         <!-- Portfolio Item 5 -->
                                         <figure class="item" data-groups='["all","laravel", "miscellaneous"]'>
-                                            <a href="https://lh3.googleusercontent.com/RaFoH2FwMqJF_HDf4Pdv8vR4uaCK9pV2wDdkLH0AE5ykLY2rlty-HU6zSnjc7WDpVYHf"
+                                            <a href="images/portfolio/platoon.jpg"
                                                 class="lightbox" title="Track Platoon">
-                                                <img src="https://lh3.googleusercontent.com/RaFoH2FwMqJF_HDf4Pdv8vR4uaCK9pV2wDdkLH0AE5ykLY2rlty-HU6zSnjc7WDpVYHf"
+                                                <img src="images/portfolio/platoon.jpg"
                                                     alt="">
                                                 <div>
                                                     <h5 class="name">Track Platoon</h5>
@@ -902,7 +902,7 @@
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                                 <input type="submit" class="button btn-send" value="Send message"
-                                                    onclick="send()">
+                                                    onclick="_send()">
                                             </div>
                                         </form>
 
@@ -934,11 +934,22 @@
     <script src="preview/lmpixels-demo-panel.js"></script>
     <!-- /Demo Color changer Script -->
     <script>
-        console.clear();
-        function send() {
+        $(document).ready(function(){
+            _consolePrint()
+        });
+
+        function _send() {
             var link = 'mailto:talhaqc@gmail.com?subject=Message from ' + document.getElementById('form_email').value +
                 '&body=' + document.getElementById('form_message').value;
             window.location.href = link;
+        }
+
+        function _consolePrint(){
+            console.clear();
+            console.log("%c%s",
+            "color: red; background: yellow; font-size: 24px;","MD. ABU TALHA");
+            console.log("%c%s",
+            "color: red; background: white; font-size: 14px;","FULL STACK WEB DEVELOPER");
         }
     </script>
 </body>
