@@ -58,7 +58,7 @@
                 <div class="site-title-block mobile-hidden">
                     <!-- <div class="site-title"> -->
                         <!-- Abu <span>Talha</span> -->
-                        <img src="images/talha.png" style="height:40px; margin-top: 30px;">
+                        <img src="images/talha.png" style="height:40px; margin-top: 14px;">
                     <!-- </div> -->
                 </div>
                 <!-- Navigation -->
@@ -895,8 +895,18 @@
                                         </div>
                                         <!-- Google Map -->
                                         <div class="map-responsive">
-                                            <iframe frameborder="1" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Mirpur%206%20Kachabazar&key=AIzaSyA-Efv3P2sO-G9NXz6Zv0FH8cKheOaI-Cw"
-                                                allowfullscreen></iframe>
+                                                <iframe width='100%' 
+                                                height='100%' 
+                                                id='mapcanvas' 
+                                                src='https://maps.google.com/maps?q=32%20Road-5,%20Dhaka%201216&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed' 
+                                                frameborder='0' 
+                                                scrolling='no' 
+                                                marginheight='0' 
+                                                marginwidth='0'>
+                                                <div style='overflow:hidden;'>
+                                                    <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                                                </div>
+                                            </iframe>
                                         </div>
 
                                         <!-- End of Google Map -->
@@ -937,7 +947,7 @@
                                         <div class="block-title">
                                             <h3>Contact <span>Form</span></h3>
                                         </div>
-                                        <form id="contact-form" method="post" action="form">
+                                        <form id="contact-form" method="post" action="javascript:_send();">
                                             <div class="messages"></div>
                                             <div class="controls">
                                                 <div class="form-group form-group-with-icon">
@@ -964,8 +974,7 @@
                                                     <div class="form-control-border"></div>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
-                                                <input type="submit" class="button btn-send" value="Send message"
-                                                    onclick="_send()">
+                                                <input type="submit" class="button btn-send" value="Send message">
                                             </div>
                                         </form>
 
@@ -1002,9 +1011,10 @@
         });
 
         function _send() {
+            console.log('Mail Action')
             var link = 'mailto:talhaqc@gmail.com?subject=Message from ' + document.getElementById('form_email').value +
                 '&body=' + document.getElementById('form_message').value;
-            window.location.href = link;
+            window.open(link, '_blank');
         }
 
         function _consolePrint(){
