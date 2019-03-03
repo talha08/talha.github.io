@@ -39,6 +39,9 @@
     .item{
         border-style: dashed;
     }
+    .probation-timer {
+        color: #4B0082;
+    }
     </style>
 </head>
 
@@ -165,7 +168,12 @@
                                             <li><span class="title">Current Position</span>
                                                 <span class="value">Software Engineer(Widespace)</span>
                                             </li>
-                                            <li><span class="title"></span><span class="value" style="color:#3CB371";>Probation Period[<p id="demo"></p>]</span></li>
+                                            <li>
+                                                <span class="title"></span><span class="value" style="color:#3CB371";>
+                                                ..::Probation Period::.. 
+                                                <p class="probation-timer" id="demo"></p>
+                                                </span>
+                                            </li>
                                             <li><span class="title">Residence</span><span class="value">Bangladesh</span></li>
                                             <li><span class="title">Address</span><span class="value">Mirpur, Dhaka,
                                                     Bangladesh</span></li>
@@ -1047,13 +1055,13 @@
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
           // Output the result in an element with id="demo"
-          document.getElementById("demo").innerHTML = days + "d: " + hours + "h: "
-          + minutes + "m: " + seconds + "s ";
+          document.getElementById("demo").innerHTML = "Ends at[" +days + "d: " + hours + "h: "
+          + minutes + "m: " + seconds + "s ]";
 
           // If the count down is over, write some text 
           if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("demo").innerHTML = "Jan 14,2019 - Apr 14,2019 (3 Months)";
           }
         }, 1000);
     </script>
